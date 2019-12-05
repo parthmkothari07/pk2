@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<title>Parth kothari</title>
+
+<style>
+hr {
+    clear: both;
+    visibility: hidden;
+}
+$c: #f90;
+$h: round(hue($c)/1deg);
+$s: round(saturation($c));
+$l: round(lightness($c));
+
+$c0: rgba(#000, .65);
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	height: 100vh;
+	/* test background *
+	background: 
+		repeating-linear-gradient(-45deg, 
+				#333 0, #333 2px, 
+				transparent 0, transparent 5px) #000;
+	/* live background */
+	background: linear-gradient($c0, $c0), 
+		url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/kreator_rockharz_july_2018.jpg) 
+			50%/ cover fixed;/**/
+	font: 10vw leckerli one, segoe script, comic sans ms, cursive;
+}
+
+#styling{
+	--i: 0;
+	transform: scale(calc(1 + var(--i)*.25));
+	color: hsl($h, $s, calc(var(--i)*#{$l} + (1 - var(--i))*100%));
+	font: 900 9vw/ 1.5 leckerli one, cursive;
+	text-decoration: none;
+	filter: drop-shadow(1px 1px 3px #000) 
+					drop-shadow(2px 2px 5px #fff);
+	transition: .5s;
+	
+	&:focus, &:hover { --i: 1 }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+   
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a  class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+      <li><a href="#" class="badge badge-primary "></a></li>
+    </ul>
+  </div>
+</nav>
+<a href='home.html' id="styling">Parth kothari</a>
+
+</body>
+</html>
